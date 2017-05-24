@@ -31,12 +31,12 @@ function readLinks() {
 	document.write('<body class="bg-black">')
 	
 	document.write('<div class="container">')
-	document.write('<div class="row lg">')
+	document.write('<div class="row">')
 	document.write('<div class="column">')
 	document.write('<center>')
 	
 	for(var i = 0;i < arrayOfLines.length;i++){
-		document.write('<video autoplay loop><source src="../' + arrayOfLines[i] + '" type="video/webm"></video>');
+		document.write('<video autoplay loop><source src="../' + arrayOfLines[i] + '"></video>');
 	}
 	
 	document.write('</center>')
