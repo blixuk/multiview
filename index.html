@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="foundation.css">
+	<title>$$$$</title>
+</head>
+
+<body class="bg-black txt-white">
+<div class="container">
+	<div class="row">
+		<div class="column">
+			<center>
+				<p>Enter the File Name with Extention</p>
+				<textarea id="links"></textarea>
+				<br>
+				<button onclick="readLinks()">Load</button>
+			</center>
+		</div>
+	</div>
+</div>
+	
+<script>
+function readLinks() {
+	var lines = document.getElementById("links");
+	var arrayOfLines = lines.value.split("\n");
+	
+	document.write('<head>')
+	document.write('<link rel="stylesheet" type="text/css" href="foundation.css">')
+
+	document.write('</head>')
+	document.write('<body class="bg-black">')
+	
+	document.write('<div class="container">')
+	document.write('<div class="row lg">')
+	document.write('<div class="column">')
+	document.write('<center>')
+	
+	for(var i = 0;i < arrayOfLines.length;i++){
+		document.write('<video autoplay loop><source src="../' + arrayOfLines[i] + '" type="video/webm"></video>');
+	}
+	
+	document.write('</center>')
+	document.write('</div>')
+	document.write('</div>')
+	document.write('</div>')
+	document.write('</body>')
+}
+</script>
+	
+</body>
